@@ -2,38 +2,146 @@
 # Atividade Avaliativa - Git Colaborativo com Portugol
 
 ## Integrantes do grupo
-- Fulano da Silva
-- Ciclana Souza  
-- Beltrano Gomes
+- Maria Eduarda Silveira
+- Monique Castro
+- Sofia Medeiros
 
 ## Objetivo
-Desenvolver colaborativamente um algoritmo em Portugol de…..
+Desenvolver colaborativamente um algoritmo em Portugol de Soma, Subtração e Multiplicação
 
 ## Etapas realizadas por cada membro
 
-### Fulano da Silva 
-- Como criou?
-- Como Configurou o Git? não deixe exposto sua chave.
-- Criou o arquivo `algoritmo.pg` com a estrutura inicial:
-- fez o que? depois?...
+### Sofia Medeiros 
+- Criou o repositório;
+- Adicionou os colaboradores;
+- Adicionou o arquivo.por com a estrutura inicial Programa e Função Inicio;
+- Fez um clone;
+- Fez um git pull
+- Fez a segunda modificação do arquivo;
+- Deu git add .;
+- Deu git commit;
+- Deu git push;
+- E por fim, atualizou o read me.
 
-### Maria Eduarda
-- Como Configurou o Git? não deixe exposto sua chave.
-- Fez `git pull` após o commit de Fulano.
-- Adicionou lógica de ... 
- 
+### Maria Eduarda Silveira
+- Fez um clone do arquivo;
+- Fez a primeira modificação do arquivo;
+- Deu o git add .;
+- Deu o git commit;
+- Deu o git push;
+- E por fim, atualizou o read me.
 
-### Beltrano Gomes 
-- Como Configurou o Git? não deixe exposto sua chave.
-- Fez `git pull` após o commit de Ciclana.
-- Finalizou o algoritmo com lógica . . .
-
+### Monique Castro 
+- Fez um clone do arquivo;
+- Deu git pull;
+- Fez a terceira e última modificação do arquivo;
+- Deu o git add .;
+- Deu o git commit;
+- Deu o git push;
+- E por fim, atualizou o read me.
 
 ## Comandos utilizados
 Todos os comandos foram executados via terminal utilizando chave SSH:
-### Comandos de Fulano
+### Comandos de Sofia:
+compuni@Lab6m33 MINGW64 ~
+$ git config --global --unset user.name
 
-### Comandos de Maria Eduarda
+compuni@Lab6m33 MINGW64 ~
+$ git config --global --unset user.email
+
+compuni@Lab6m33 MINGW64 ~
+$ rm -f ~/.ssh/id_rsa*
+
+compuni@Lab6m33 MINGW64 ~
+$ git config --global user.name sofimedeirosz
+
+compuni@Lab6m33 MINGW64 ~
+$ git config --global user.email sofia.medeiros@edu.unifil.br
+
+compuni@Lab6m33 MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C sofia.medeiros@edu.unifil.br
+(chave privada)
+compuni@Lab6m33 MINGW64 ~
+$ eval "$(ssh-agent -s)"
+Agent pid 407
+
+compuni@Lab6m33 MINGW64 ~
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/compuni/.ssh/id_rsa (sofia.medeiros@edu.unifil.br)
+
+compuni@Lab6m33 MINGW64 ~
+$ clip < ~/.ssh/id_rsa.pub
+
+compuni@Lab6m33 MINGW64 ~
+$ ssh -T git@github.com
+Hi sofimedeirosz! You've successfully authenticated, but GitHub does not provide shell access.
+
+compuni@Lab6m33 MINGW64 ~
+$ git clone git@github.com:sofimedeirosz/Atividade-Git-Final
+Cloning into 'Atividade-Git-Final'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+compuni@Lab6m33 MINGW64 ~
+$ cd Atividade-Final-Git
+bash: cd: Atividade-Final-Git: No such file or directory
+
+compuni@Lab6m33 MINGW64 ~
+$  cd Atividade-Git-Final
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 387 bytes | 4.00 KiB/s, done.
+From github.com:sofimedeirosz/Atividade-Git-Final
+   f19761d..b8d8e59  main       -> origin/main
+Updating f19761d..b8d8e59
+Fast-forward
+ atv final git.por | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+compuni@Lab6m33 MINGW64 ~/Atividade-Git-Final (main)
+$ code .
+
+compuni@Lab6m33 MINGW64 ~/Atividade-Git-Final (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   atv final git.por
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+compuni@Lab6m33 MINGW64 ~/Atividade-Git-Final (main)
+$ git add .
+
+compuni@Lab6m33 MINGW64 ~/Atividade-Git-Final (main)
+$ git commit -m "Multiplicação"
+[main 32a82ed] Multiplicação
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+compuni@Lab6m33 MINGW64 ~/Atividade-Git-Final (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 394 bytes | 394.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:sofimedeirosz/Atividade-Git-Final
+   b8d8e59..32a82ed  main -> main
+
+
+
+### Comandos de Maria Eduarda:
 compuni@Lab6m34 MINGW64 ~
 $ git config --global user.name
 
@@ -57,27 +165,7 @@ $ git config --global user.email "dudasouzas007@gmail.com"
 
 compuni@Lab6m34 MINGW64 ~
 $ ssh-keygen -t rsa -b 4096 -C "dudasouzas007@gmail.com"
-Generating public/private rsa key pair.
-Enter file in which to save the key (/c/Users/compuni/.ssh/id_rsa):
-Created directory '/c/Users/compuni/.ssh'.
-Enter passphrase for "/c/Users/compuni/.ssh/id_rsa" (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /c/Users/compuni/.ssh/id_rsa
-Your public key has been saved in /c/Users/compuni/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:7lA4JFiY89vjvX/mJVdTelXiZTV2bqZMZjtC6HSI0No dudasouzas007@gmail.com
-The key's randomart image is:
-+---[RSA 4096]----+
-|   o. ..      .oB|
-|  +o   ... o ..=+|
-|  .o. .o. + o = *|
-|    .o..Eo o = *o|
-|     oo S . . *.o|
-|    . o+     . +.|
-|     ..o.   . o  |
-|      .o.   o+   |
-|        oo.+.    |
-+----[SHA256]-----+
+(chave privada)
 
 compuni@Lab6m34 MINGW64 ~
 $ eval "$(ssh-agent -s)"
@@ -179,7 +267,7 @@ To github.com:sofimedeirosz/Atividade-Git-Final
 
 
 
-### Comandos de Monique
+### Comandos de Monique:
 ASUS@LAPTOP-PQ88A7LP MINGW64 ~
 $ git config --global user.name
 
@@ -210,26 +298,7 @@ $ git config --global user.email castromonique807@gmail.com
 
 ASUS@LAPTOP-PQ88A7LP MINGW64 ~
 $ ssh-keygen -t rsa -b 4096 -C castromonique807@gmail.com
-Generating public/private rsa key pair.
-Enter file in which to save the key (/c/Users/ASUS/.ssh/id_rsa):
-Enter passphrase for "/c/Users/ASUS/.ssh/id_rsa" (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /c/Users/ASUS/.ssh/id_rsa
-Your public key has been saved in /c/Users/ASUS/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:8xuFOxKggBvkTWj3/BvIS7nM7oo7SxYPoApNooBkbek castromonique807@gmail.com
-The key's randomart image is:
-+---[RSA 4096]----+
-| +o..            |
-|*+o=             |
-|O.*.o .          |
-|=* E + .   .     |
-|=o. o + S . .    |
-|o +  = o + o     |
-|.o .+ o + =      |
-|o..  = . . +     |
-| ++.+o    .      |
-+----[SHA256]-----+
+(chave privada)
 
 ASUS@LAPTOP-PQ88A7LP MINGW64 ~
 $ eval "$(ssh-agent -s)"
