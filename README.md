@@ -179,7 +179,111 @@ To github.com:sofimedeirosz/Atividade-Git-Final
 
 
 
-### Comandos de beltrano
+### Comandos de Monique
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git config --global user.name
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git config --global user.email
+castromonique807@gmail.com
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git config --global --unset user.name
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git config --global --unset user.email
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ ls -al ~/.ssh
+total 12
+drwxr-xr-x 1 ASUS 197121 0 Mar 28 20:23 ./
+drwxr-xr-x 1 ASUS 197121 0 Apr 11 19:16 ../
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ rm -f ~/.ssh/id_rsa*
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git config --global user.name monique
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git config --global user.email castromonique807@gmail.com
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C castromonique807@gmail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/ASUS/.ssh/id_rsa):
+Enter passphrase for "/c/Users/ASUS/.ssh/id_rsa" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/ASUS/.ssh/id_rsa
+Your public key has been saved in /c/Users/ASUS/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:8xuFOxKggBvkTWj3/BvIS7nM7oo7SxYPoApNooBkbek castromonique807@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+| +o..            |
+|*+o=             |
+|O.*.o .          |
+|=* E + .   .     |
+|=o. o + S . .    |
+|o +  = o + o     |
+|.o .+ o + =      |
+|o..  = . . +     |
+| ++.+o    .      |
++----[SHA256]-----+
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ eval "$(ssh-agent -s)"
+Agent pid 1394
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/ASUS/.ssh/id_rsa (castromonique807@gmail.com)
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ clip < ~/.ssh/id_rsa.pub
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$  clip < ~/.ssh/id_rsa.pub
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ ssh -T git@github.com
+The authenticity of host 'github.com (20.201.28.151)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi mopsychosz! You've successfully authenticated, but GitHub does not provide shell access.
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~
+$ git clone git@github.com:sofimedeirosz/Atividade-Git-Final
+Cloning into 'Atividade-Git-Final'...
+remote: Enumerating objects: 6, done.
+
+Aborting commit due to empty commit message.
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~/Atividade-Git-Final (main)
+$ git commit -m "subtração"
+[main d5456f7] subtração
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~/Atividade-Git-Final (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:sofimedeirosz/Atividade-Git-Final
+   32a82ed..d5456f7  main -> main
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~/Atividade-Git-Final (main)
+$
+
+ASUS@LAPTOP-PQ88A7LP MINGW64 ~/Atividade-Git-Final (main)
+$ clip <~/.ssh/id_rsa.pub
+
 
 ## Observações
 Cada etapa foi realizada por apenas um integrante por vez, respeitando a ordem de commits e a integridade do código.
